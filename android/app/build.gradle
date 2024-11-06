@@ -135,8 +135,8 @@ android {
         applicationId "com.bulltronics.rc.system"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 10
-        versionName "1.0009"
+        versionCode project.hasProperty("VERSION_CODE") ? project.VERSION_CODE.toInteger() : 1
+        versionName project.hasProperty("VERSION_NAME") ? project.VERSION_NAME : "1.00"
     }
     splits {
         abi {
